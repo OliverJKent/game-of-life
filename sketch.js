@@ -9,7 +9,7 @@ function create2DArray(cols, rows) { //a 2D array is needed to store the state o
 let scale = 20; //can be edited to control the number of cells on the grid (lower values produce more cells)
 
 function setup() { //used by p5.js to setup the canvas
-  frameRate(8); //refresh the game state twice per second
+  frameRate(8); //the game will run at 8 frames per second
   createCanvas(600, 400); //create a canvas 600 pixels wide, 400 pixels tall
 	cols = width / scale; //calculate the number of columns on the grid
 	rows = height / scale; //calculate the number of rows on the grid
@@ -63,7 +63,7 @@ function draw() { //used by p5.js to draw onto the canvas
 
 function countNeighbours(grid, x, y) { //takes the state of the grid and the position of a cell
 	let sum = 0;
-	for (let i = -1; i < 2; i++) { //for every neighbouring cell
+	for (let i = -1; i < 2; i++) { //loop through cells which may have living neighbours
 		for (let j = -1; j < 2; j++) {
 			let col = (x + i + cols) % cols; //calculate the positions of potential neighbours
 			let row = (y + j + rows) % rows;
