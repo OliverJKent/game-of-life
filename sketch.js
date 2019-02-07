@@ -1,7 +1,7 @@
 function create2DArray(cols, rows) { //a 2D array is needed to store the state of each cell in the grid
 	let gridArr = new Array(cols); //create an array for the columns in the grid
 	for (let i = 0; i < gridArr.length; i++) { //loop through every value in the array
-		gridArr[i] = new Array(rows); //create a rows array within each cell of our colums array
+		gridArr[i] = new Array(rows); //create a rows array within each cell of our columns array
 	}
 	return gridArr;
 }
